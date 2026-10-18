@@ -32,31 +32,31 @@
     <section id="home" class="view active" aria-labelledby="homeTitle">
       <div class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Made with care in Vermont</p>
-          <h1 id="homeTitle">Technology should feel <em>clear,</em> not complicated.</h1>
-          <p class="hero-text">Lumio gives you calm, step-by-step practice with phones, video calls, passwords, artificial intelligence, and online safety.</p>
+          <p class="eyebrow">Simple technology lessons</p>
+          <h1 id="homeTitle">Feel safer and more confident online.</h1>
+          <p class="hero-text">Short, friendly lessons for everyday technology and online safety.</p>
           <div class="button-row">
-            <button class="button primary" data-go="learn">Start learning <span aria-hidden="true">→</span></button>
-            <button class="button secondary" data-open-lesson="basics">Try a 3-minute lesson</button>
+            <button class="button primary" data-open-lesson="basics">Start a 3-minute lesson <span aria-hidden="true">→</span></button>
+            <button class="button secondary" data-go="learn">See all lessons</button>
           </div>
-          <p class="privacy-note"><span aria-hidden="true">●</span> No account. No ads. Your progress stays on this device.</p>
+          <p class="privacy-note">Free · Private · No account needed</p>
         </div>
-        <div class="hero-art" aria-label="A friendly illustration of a lantern lighting a path toward Vermont's mountains">
+        <div class="hero-art concise-art" aria-label="A warm light over Vermont's mountains">
           <div class="sun"></div><div class="mountain far"></div><div class="mountain near"></div>
-          <div class="path"></div><div class="lantern"><span></span></div>
-          <div class="art-note"><strong>A little light goes a long way.</strong><span>Learn at your pace. Repeat anything.</span></div>
+          <div class="lantern"><span></span></div>
         </div>
       </div>
 
-      <div class="daily-tip">
-        <span class="tip-icon" aria-hidden="true">☀</span>
-        <div><p class="eyebrow">Today's small step</p><p id="dailyTip">Before tapping a link in a message, pause and ask: was I expecting this?</p></div>
-      </div>
+      <section class="home-paths" aria-label="Choose what to do">
+        <button class="path-card" data-go="learn"><span class="path-number">01</span><span><strong>Learn</strong><small>Six short lessons</small></span><b aria-hidden="true">→</b></button>
+        <button class="path-card" data-go="practice"><span class="path-number">02</span><span><strong>Practice</strong><small>Spot scams safely</small></span><b aria-hidden="true">→</b></button>
+        <button class="path-card" data-go="help"><span class="path-number">03</span><span><strong>Get help</strong><small>Talk to a real person</small></span><b aria-hidden="true">→</b></button>
+      </section>
 
-      <section class="section-block" aria-labelledby="pathTitle">
-        <div class="section-heading"><div><p class="eyebrow">Your learning path</p><h2 id="pathTitle">Start anywhere. Go at your pace.</h2></div><p id="progressText">0 of 6 lessons completed</p></div>
+      <section class="compact-progress" aria-labelledby="progressText">
+        <div><p class="eyebrow">Your progress</p><p id="progressText">0 of 6 lessons completed</p></div>
         <div class="progress-track" role="progressbar" aria-label="Lesson progress" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0"><span id="progressBar"></span></div>
-        <div id="lessonGrid" class="card-grid"></div>
+        <button class="text-button" data-go="learn">Continue learning →</button>
       </section>
     </section>
 
