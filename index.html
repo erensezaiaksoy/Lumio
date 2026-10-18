@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173f36">
+  <meta name="description" content="Lumio helps older Vermonters learn everyday technology, understand AI, and spot scams through friendly, accessible practice.">
+  <meta property="og:title" content="Lumio — Technology made clearer">
+  <meta property="og:description" content="Friendly technology, AI, and scam-safety lessons made for older Vermonters.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Lumio — Technology made clearer">
+  <meta name="twitter:description" content="Friendly technology, AI, and scam-safety lessons made for older Vermonters.">
+  <title>Lumio — Technology Made Clearer</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Lumio home"><span class="brand-mark" aria-hidden="true">L</span><span>Lumio</span></a>
+    <nav aria-label="Main navigation">
+      <button class="nav-link active" data-view="home">Home</button>
+      <button class="nav-link" data-view="learn">Learn</button>
+      <button class="nav-link" data-view="practice">Practice</button>
+      <button class="nav-link" data-view="help">Get help</button>
+    </nav>
+    <button id="settingsBtn" class="settings-button" aria-haspopup="dialog">Aa <span>Settings</span></button>
+  </header>
+
+  <main id="main">
+    <section id="home" class="view active" aria-labelledby="homeTitle">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Made with care in Vermont</p>
+          <h1 id="homeTitle">Technology should feel <em>clear,</em> not complicated.</h1>
+          <p class="hero-text">Lumio gives you calm, step-by-step practice with phones, video calls, passwords, artificial intelligence, and online safety.</p>
+          <div class="button-row">
+            <button class="button primary" data-go="learn">Start learning <span aria-hidden="true">→</span></button>
+            <button class="button secondary" data-open-lesson="basics">Try a 3-minute lesson</button>
+          </div>
+          <p class="privacy-note"><span aria-hidden="true">●</span> No account. No ads. Your progress stays on this device.</p>
+        </div>
+        <div class="hero-art" aria-label="A friendly illustration of a lantern lighting a path toward Vermont's mountains">
+          <div class="sun"></div><div class="mountain far"></div><div class="mountain near"></div>
+          <div class="path"></div><div class="lantern"><span></span></div>
+          <div class="art-note"><strong>A little light goes a long way.</strong><span>Learn at your pace. Repeat anything.</span></div>
+        </div>
+      </div>
+
+      <div class="daily-tip">
+        <span class="tip-icon" aria-hidden="true">☀</span>
+        <div><p class="eyebrow">Today's small step</p><p id="dailyTip">Before tapping a link in a message, pause and ask: was I expecting this?</p></div>
+      </div>
+
+      <section class="section-block" aria-labelledby="pathTitle">
+        <div class="section-heading"><div><p class="eyebrow">Your learning path</p><h2 id="pathTitle">Start anywhere. Go at your pace.</h2></div><p id="progressText">0 of 6 lessons completed</p></div>
+        <div class="progress-track" role="progressbar" aria-label="Lesson progress" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0"><span id="progressBar"></span></div>
+        <div id="lessonGrid" class="card-grid"></div>
+      </section>
+    </section>
+
+    <section id="learn" class="view page-view" aria-labelledby="learnTitle">
+      <p class="eyebrow">Learn with Lumio</p><h1 id="learnTitle">Small lessons. Useful skills.</h1>
+      <p class="page-intro">Each lesson takes about three minutes and ends with one quick question. You can repeat them whenever you like.</p>
+      <div id="allLessons" class="card-grid"></div>
+    </section>
+
+    <section id="practice" class="view page-view" aria-labelledby="practiceTitle">
+      <p class="eyebrow">Practice safely</p><h1 id="practiceTitle">Build confidence without risk.</h1>
+      <p class="page-intro">These activities use made-up examples. Nothing you type is sent anywhere.</p>
+      <div class="activity-grid">
+        <article class="activity-card featured"><span class="activity-icon">⌕</span><div><p class="eyebrow">Message checker</p><h2>Could this be a scam?</h2><p>Paste or type a suspicious message. Lumio looks for common warning signs.</p><button class="button primary" data-modal="checker">Check a message</button></div></article>
+        <article class="activity-card"><span class="activity-icon">✓?</span><div><p class="eyebrow">Quick challenge</p><h2>Scam or safe?</h2><p>Practice with five realistic messages and learn what to look for.</p><button class="button secondary" data-modal="quiz">Start challenge</button></div></article>
+        <article class="activity-card"><span class="activity-icon">★</span><div><p class="eyebrow">Family safety</p><h2>Make a safe-word plan</h2><p>Create a simple plan your family can use if a voice call feels suspicious.</p><button class="button secondary" data-modal="safeword">Make a plan</button></div></article>
+        <article class="activity-card"><span class="activity-icon">Hi</span><div><p class="eyebrow">AI practice</p><h2>Try a pretend chatbot</h2><p>Ask a harmless question and see how to check an AI answer.</p><button class="button secondary" data-modal="chat">Practice chatting</button></div></article>
+      </div>
+    </section>
+
+    <section id="help" class="view page-view" aria-labelledby="helpTitle">
+      <p class="eyebrow">Real people can help</p><h1 id="helpTitle">You do not have to figure it out alone.</h1>
+      <p class="page-intro">If money, personal information, or immediate danger is involved, stop and contact someone you trust.</p>
+      <div class="help-grid">
+        <article class="help-card"><span>01</span><h2>Vermont 211</h2><p>Find local community resources and support.</p><a href="tel:211">Call 2-1-1</a></article>
+        <article class="help-card"><span>02</span><h2>Senior HelpLine</h2><p>Get help finding aging services in Vermont.</p><a href="tel:18006425113">Call 1-800-642-5119</a></article>
+        <article class="help-card"><span>03</span><h2>Consumer Assistance</h2><p>Report a scam or ask the Vermont Attorney General's team for guidance.</p><a href="tel:18006492420">Call 1-800-649-2424</a></article>
+      </div>
+      <div class="urgent-note"><strong>Remember:</strong> Government agencies will not demand gift cards, cryptocurrency, or secrecy. If a caller pressures you, hang up and call the organization using a number you find yourself.</div>
+    </section>
+  </main>
+
+  <footer><div class="brand"><span class="brand-mark">L</span><span>Lumio</span></div><p>Technology made clearer, one small step at a time.</p><button id="testingBtn" class="text-button">Helping us test Lumio? Share feedback</button></footer>
+
+  <dialog id="lessonDialog" class="dialog"><button class="close" aria-label="Close">×</button><div id="lessonContent"></div></dialog>
+  <dialog id="activityDialog" class="dialog"><button class="close" aria-label="Close">×</button><div id="activityContent"></div></dialog>
+  <dialog id="settingsDialog" class="dialog compact"><button class="close" aria-label="Close">×</button><p class="eyebrow">Make Lumio comfortable</p><h2>Display & reading</h2><fieldset><legend>Text size</legend><div class="choice-row"><button data-size="normal">Normal</button><button data-size="large">Large</button><button data-size="largest">Largest</button></div></fieldset><label class="toggle"><input id="contrastToggle" type="checkbox"><span>High contrast</span></label><label class="toggle"><input id="motionToggle" type="checkbox"><span>Reduce motion</span></label></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
