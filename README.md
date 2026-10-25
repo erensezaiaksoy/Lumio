@@ -45,7 +45,7 @@ Lumio uses plain HTML, CSS, and JavaScript. It has no framework, build step, or 
 
 ## Congressional App Challenge disclosure
 
-This project was developed with assistance from generative AI. The student should replace this paragraph with an accurate first-person description of which ideas, text, code, debugging, testing, and revisions were completed by the student and which were assisted by AI before submitting.
+I developed Lumio with assistance from ChatGPT. I used ChatGPT to help connect Supabase to my existing codebase so users could create accounts and save their progress across devices. ChatGPT also helped me debug issues and run tests to check that the authentication and progress-tracking features worked correctly. I reviewed the changes and made adjustments to ensure the app worked as intended.
 
 ## License
 
