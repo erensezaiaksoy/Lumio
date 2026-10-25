@@ -13,7 +13,7 @@
   <meta name="twitter:description" content="Friendly technology, AI, and scam-safety lessons made for older Vermonters.">
   <title>Lumio — Technology Made Clearer</title>
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=6">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -25,7 +25,10 @@
       <button class="nav-link" data-view="practice">Practice</button>
       <button class="nav-link" data-view="help">Get help</button>
     </nav>
-    <button id="settingsBtn" class="settings-button" aria-haspopup="dialog">Aa <span>Settings</span></button>
+    <div class="header-actions">
+      <button id="accountBtn" class="account-button" aria-haspopup="dialog">Sign in</button>
+      <button id="settingsBtn" class="settings-button" aria-haspopup="dialog">Aa <span>Settings</span></button>
+    </div>
   </header>
 
   <main id="main">
@@ -39,10 +42,10 @@
             <button class="button primary" data-open-lesson="basics">Start a 3-minute lesson <span aria-hidden="true">→</span></button>
             <button class="button secondary" data-modal="checker">Check a suspicious message</button>
           </div>
-          <p class="privacy-note">Free · Private · No account needed</p>
+          <p class="privacy-note">Free · Private · Use without an account, or sign in to sync progress</p>
           <p class="trust-note">Lumio will never ask for your password, payment information, or account details.</p>
         </div>
-        <figure class="hero-photo"><img src="assets/lumio-learning.jpg" alt="An older Vermonter comfortably learning on a tablet at home"></figure>
+        <figure class="hero-photo"><img src="assets/lumio-calm-tablet.png" alt="Hands comfortably using a tablet at a quiet table"></figure>
       </div>
 
       <section class="home-paths" aria-label="Choose what to do">
@@ -54,13 +57,18 @@
       <section class="compact-progress" aria-labelledby="progressText">
         <div><p class="eyebrow">Your progress</p><p id="progressText">0 of 6 lessons completed</p></div>
         <div class="progress-track" role="progressbar" aria-label="Lesson progress" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0"><span id="progressBar"></span></div>
-        <button class="text-button" data-go="learn">Continue learning →</button>
+        <button id="continueLesson" class="text-button" data-open-lesson="basics">Continue learning →</button>
       </section>
     </section>
 
     <section id="learn" class="view page-view" aria-labelledby="learnTitle">
       <p class="eyebrow">Technology lessons</p><h1 id="learnTitle">Small lessons. Useful skills.</h1>
-      <p class="page-intro">Each lesson takes about three minutes and ends with one quick question. You can repeat them whenever you like.</p>
+      <p class="page-intro">Build everyday skills one short lesson at a time. Every lesson ends with a quick question, and you can repeat it whenever you like.</p>
+      <div class="lesson-tools" aria-label="Find lessons">
+        <label>Search lessons<input id="lessonSearch" type="search" placeholder="Try “email” or “safety”"></label>
+        <label>Category<select id="lessonCategory"><option>All</option><option>Basics</option><option>Communication</option><option>Safety</option><option>AI</option><option>Everyday</option></select></label>
+        <p id="lessonResultCount" aria-live="polite">Showing 14 of 14 lessons</p>
+      </div>
       <div id="allLessons" class="card-grid"></div>
     </section>
 
@@ -91,8 +99,11 @@
 
   <dialog id="lessonDialog" class="dialog"><button class="close" aria-label="Close">×</button><div id="lessonContent"></div></dialog>
   <dialog id="activityDialog" class="dialog"><button class="close" aria-label="Close">×</button><div id="activityContent"></div></dialog>
+  <dialog id="accountDialog" class="dialog compact"><button class="close" aria-label="Close">×</button><div id="accountContent"></div></dialog>
   <dialog id="settingsDialog" class="dialog compact"><button class="close" aria-label="Close">×</button><p class="eyebrow">Make Lumio comfortable</p><h2>Display & reading</h2><fieldset><legend>Text size</legend><div class="choice-row"><button data-size="normal">Normal</button><button data-size="large">Large</button><button data-size="largest">Largest</button></div></fieldset><label class="toggle"><input id="contrastToggle" type="checkbox"><span>High contrast</span></label><label class="toggle"><input id="motionToggle" type="checkbox"><span>Reduce motion</span></label></dialog>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="app.js?v=6"></script>
 </body>
 </html>

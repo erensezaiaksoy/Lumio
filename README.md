@@ -4,19 +4,29 @@ Lumio is a free, accessible web app that helps older Vermonters build confidence
 
 ## Features
 
-- Six short, step-by-step lessons with knowledge checks
+- Fourteen searchable, categorized lessons with steps and knowledge checks
 - Read-aloud support, adjustable text size, high contrast, and reduced motion
 - A private, rule-based suspicious-message checker
 - Five-question “Scam or safe?” practice challenge
 - Family safe-word planning card
 - A clearly labeled pretend chatbot for safe AI practice
 - Vermont help resources
-- Device-local lesson progress and user-testing feedback
+- Optional email accounts with cross-device lesson and quiz progress
+- Guest progress and user-testing feedback stored on the device
 - Offline support after the first visit
 
 ## Privacy
 
-Lumio has no accounts, analytics, advertising, or server. Progress, settings, and testing feedback stay in the browser’s local storage on the user’s device.
+Lumio can be used without an account. Guest progress, settings, and testing feedback stay in the browser. When a user chooses to sign in, only lesson IDs, quiz score/attempt count, and the account identifier are stored in Supabase. Message-checker text, safe words, chatbot text, settings, and feedback are never uploaded.
+
+## Connect the free Supabase backend
+
+1. Create a Supabase project and open its SQL Editor.
+2. Run `supabase-schema.sql` to create the progress table and per-user security policies.
+3. In Authentication settings, keep email/password enabled. Add the deployed Lumio URL and local URL (for example `http://localhost:8000`) to the allowed redirect URLs.
+4. Copy `config.example.js` to `config.js`, then add the project URL and **anon/public** key from Project Settings > API. Never use the service-role key in this browser app.
+
+`config.js` is ignored by Git. For static hosting, create it during deployment from the host's environment variables, or store the public URL and anon key in the hosting provider's configuration. Supabase anon keys are designed to be public; row-level security is what protects user data.
 
 ## Run locally
 
