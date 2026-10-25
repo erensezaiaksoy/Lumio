@@ -4,7 +4,8 @@ Lumio is a free, accessible web app that helps older Vermonters build confidence
 
 ## Features
 
-- Fourteen searchable, categorized lessons with steps and knowledge checks
+- Twenty searchable, categorized lessons with steps and knowledge checks
+- Progress dashboard with topic breakdowns, quiz stats, and milestones
 - Read-aloud support, adjustable text size, high contrast, and reduced motion
 - A private, rule-based suspicious-message checker
 - Five-question “Scam or safe?” practice challenge

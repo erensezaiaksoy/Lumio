@@ -13,7 +13,7 @@
   <meta name="twitter:description" content="Friendly technology, AI, and scam-safety lessons made for older Vermonters.">
   <title>Lumio — Technology Made Clearer</title>
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="styles.css?v=6">
+  <link rel="stylesheet" href="styles.css?v=7">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -23,6 +23,7 @@
       <button class="nav-link active" data-view="home">Home</button>
       <button class="nav-link" data-view="learn">Learn</button>
       <button class="nav-link" data-view="practice">Practice</button>
+      <button class="nav-link" data-view="progress">Progress</button>
       <button class="nav-link" data-view="help">Get help</button>
     </nav>
     <div class="header-actions">
@@ -55,8 +56,8 @@
       </section>
 
       <section class="compact-progress" aria-labelledby="progressText">
-        <div><p class="eyebrow">Your progress</p><p id="progressText">0 of 6 lessons completed</p></div>
-        <div class="progress-track" role="progressbar" aria-label="Lesson progress" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0"><span id="progressBar"></span></div>
+        <div><p class="eyebrow">Your progress</p><p id="progressText">0 of 20 lessons completed</p></div>
+        <div class="progress-track" role="progressbar" aria-label="Lesson progress" aria-valuemin="0" aria-valuemax="20" aria-valuenow="0"><span id="progressBar"></span></div>
         <button id="continueLesson" class="text-button" data-open-lesson="basics">Continue learning →</button>
       </section>
     </section>
@@ -67,9 +68,20 @@
       <div class="lesson-tools" aria-label="Find lessons">
         <label>Search lessons<input id="lessonSearch" type="search" placeholder="Try “email” or “safety”"></label>
         <label>Category<select id="lessonCategory"><option>All</option><option>Basics</option><option>Communication</option><option>Safety</option><option>AI</option><option>Everyday</option></select></label>
-        <p id="lessonResultCount" aria-live="polite">Showing 14 of 14 lessons</p>
+        <p id="lessonResultCount" aria-live="polite">Showing 20 of 20 lessons</p>
       </div>
       <div id="allLessons" class="card-grid"></div>
+    </section>
+
+    <section id="progress" class="view page-view" aria-labelledby="progressTitle">
+      <p class="eyebrow">Your learning</p><h1 id="progressTitle">See how far you’ve come.</h1>
+      <p class="page-intro">Every completed lesson counts. Sign in to keep this progress synced across devices.</p>
+      <div id="progressStats" class="progress-stats"></div>
+      <div class="progress-layout">
+        <section aria-labelledby="categoryTitle"><h2 id="categoryTitle">Progress by topic</h2><div id="categoryProgress" class="category-list"></div></section>
+        <section aria-labelledby="milestoneTitle"><h2 id="milestoneTitle">Milestones</h2><div id="milestones" class="milestone-list"></div></section>
+      </div>
+      <button class="button primary" data-go="learn">Keep learning</button>
     </section>
 
     <section id="practice" class="view page-view" aria-labelledby="practiceTitle">
@@ -104,6 +116,6 @@
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="config.js?v=1"></script>
-  <script src="app.js?v=6"></script>
+  <script src="app.js?v=7"></script>
 </body>
 </html>
